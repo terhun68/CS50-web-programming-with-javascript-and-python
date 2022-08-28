@@ -1,3 +1,16 @@
-name = input("Name: ")
-print(f"hello, haha {name}")
-print("haha")
+import sys
+
+try:
+    x = int(input("x:" ))
+    y = int(input("y:" ))
+except ValueError:
+    print("Error: Cannot input string")
+    sys.exit(1)
+
+try:
+    result = x / y
+except ZeroDivisionError:
+    print("Error: Cannot divide by 0")
+    sys.exit(1)
+
+print(result)
